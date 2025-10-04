@@ -7,34 +7,43 @@ const projects = [
     id: 1, 
     title: "Modern Barber Studio", 
     img: barber1, 
-    link: "#" 
+    link: "/projects/barber-1/index.html" 
   },
   { 
     id: 2, 
     title: "Vintage Barbershop", 
     img: barber2, 
-    link: "#" 
+    link: "/projects/barber-2/index.html" 
   },
   { 
     id: 3, 
     title: "Urban Cuts", 
     img: barber3, 
-    link: "#" 
+    link: "/projects/barber-3/index.html" 
+  },
+  { 
+    id: 4, 
+    title: "Premium Barber Lounge", 
+    img: barber1, // Using barber1 as placeholder for barber-4
+    link: "/projects/barber-4/index.html" 
   },
 ];
 
 export default function Projects() {
+  const handleProjectClick = (link: string) => {
+    window.open(link, '_blank');
+  };
+
   return (
     <section id="projects" className="max-w-[1200px] mx-auto py-20 md:py-28 px-6">
       <h2 className="text-3xl md:text-4xl knewave-regular mb-10 text-center" data-testid="text-projects-title">
         Projects
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
         {projects.map((project) => (
-          <a 
-            href={project.link}
+          <div 
             key={project.id} 
-            className="block rounded-2xl overflow-hidden shadow-md hover:-translate-y-2 transition-transform duration-300 group"
+            className="rounded-2xl overflow-hidden shadow-md hover:-translate-y-2 transition-transform duration-300 group bg-card"
             data-testid={`card-project-${project.id}`}
           >
             <div className="relative overflow-hidden">
@@ -46,10 +55,19 @@ export default function Projects() {
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
             </div>
-            <h3 className="text-center py-4 knewave-regular text-lg md:text-xl bg-card" data-testid={`text-project-title-${project.id}`}>
-              {project.title}
-            </h3>
-          </a>
+            <div className="p-6">
+              <h3 className="text-center mb-4 knewave-regular text-lg md:text-xl" data-testid={`text-project-title-${project.id}`}>
+                {project.title}
+              </h3>
+              <button
+                onClick={() => handleProjectClick(project.link)}
+                className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-300"
+                data-testid={`btn-project-preview-${project.id}`}
+              >
+                See Live Preview
+              </button>
+            </div>
+          </div>
         ))}
       </div>
     </section>

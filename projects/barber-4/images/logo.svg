@@ -1,0 +1,26 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Barber Pole Stripes -->
+  <g id="barber-pole">
+    <rect x="10" y="5" width="30" height="50" fill="#E10600" rx="15"/>
+    <path d="M 25 5 L 35 25 L 25 45 L 15 25 Z" fill="#FFFFFF" opacity="0.3"/>
+    <path d="M 15 15 L 25 35 L 35 35 L 25 15 Z" fill="#FFFFFF" opacity="0.2"/>
+  </g>
+  
+  <!-- Scissors Icon -->
+  <g id="scissors" transform="translate(50, 15)">
+    <circle cx="5" cy="10" r="4" fill="#D4A017" stroke="#FFFFFF" stroke-width="1"/>
+    <circle cx="5" cy="25" r="4" fill="#D4A017" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="5" y1="10" x2="15" y2="17.5" stroke="#FFFFFF" stroke-width="2"/>
+    <line x1="5" y1="25" x2="15" y2="17.5" stroke="#FFFFFF" stroke-width="2"/>
+    <line x1="15" y1="17.5" x2="25" y2="10" stroke="#FFFFFF" stroke-width="2"/>
+    <line x1="15" y1="17.5" x2="25" y2="25" stroke="#FFFFFF" stroke-width="2"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="85" y="25" font-family="Montserrat, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF">
+    BARBER
+  </text>
+  <text x="85" y="45" font-family="Montserrat, sans-serif" font-size="18" font-weight="800" fill="#D4A017">
+    SHOP
+  </text>
+</svg>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Professional Barber Shop</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/logo.svg" alt="Barber Shop Logo">
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="appointment.html" class="active">Appointment</a>
+                <a href="contact.html">Contacts</a>
+            </nav>
+            <a href="appointment.html" class="btn btn-primary">BOOK NOW</a>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>BOOK YOUR APPOINTMENT</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-intro">
+                <h2 class="section-title center">SCHEDULE YOUR VISIT</h2>
+                <p class="center-text">Fill out the form below and we'll confirm your appointment shortly.</p>
+            </div>
+            <div class="booking-form-container">
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Select Service *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Choose a service...</option>
+                                <option value="haircut">Men's Haircut - $45</option>
+                                <option value="styling">Men's Hair Styling - $35</option>
+                                <option value="shave">Hot Towel Shave - $40</option>
+                                <option value="beard">Beard Trim & Styling - $30</option>
+                                <option value="coloring">Hair Coloring - $65</option>
+                                <option value="scalp">Scalp Treatment - $50</option>
+                                <option value="executive">The Executive Package - $95</option>
+                                <option value="gentleman">The Gentleman Package - $125</option>
+                                <option value="classic">The Classic Package - $65</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Preferred Date *</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Preferred Time *</label>
+                            <select id="time" name="time" required>
+                                <option value="">Select time...</option>
+                                <option value="09:00">09:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">01:00 PM</option>
+                                <option value="14:00">02:00 PM</option>
+                                <option value="15:00">03:00 PM</option>
+                                <option value="16:00">04:00 PM</option>
+                                <option value="17:00">05:00 PM</option>
+                                <option value="18:00">06:00 PM</option>
+                                <option value="19:00">07:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="barber">Preferred Barber (Optional)</label>
+                        <select id="barber" name="barber">
+                            <option value="">No preference</option>
+                            <option value="john">John Martinez</option>
+                            <option value="mike">Mike Anderson</option>
+                            <option value="david">David Thompson</option>
+                            <option value="chris">Chris Rodriguez</option>
+                            <option value="alex">Alex Chen</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Notes</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Any special requests or notes..."></textarea>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary btn-large">BOOK APPOINTMENT</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="booking-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>WORKING HOURS</h3>
+                    <p>Mon-Fri: 9:00 AM - 8:00 PM<br>
+                    Sat: 9:00 AM - 6:00 PM<br>
+                    Sun: 10:00 AM - 5:00 PM</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>CALL US</h3>
+                    <p>(212) 555-CUTS<br>
+                    We're here to help!</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>CANCELLATION POLICY</h3>
+                    <p>Please notify us 24 hours in advance if you need to cancel or reschedule.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="images/logo.svg" alt="Barber Shop Logo">
+                    </div>
+                    <h4>OUR LOCATION</h4>
+                    <p>123 Prince Street<br>Soho, Manhattan<br>New York, NY 10012</p>
+                </div>
+                <div class="footer-col">
+                    <h4>CONTACT INFO</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Prince Street, Soho, NY 10012</p>
+                    <p><i class="fas fa-envelope"></i> info@barbershop.com</p>
+                    <p><i class="fas fa-phone"></i> (212) 555-CUTS</p>
+                </div>
+                <div class="footer-col">
+                    <h4>MAKE AN APPOINTMENT</h4>
+                    <p>Ready for a premium grooming experience?</p>
+                    <a href="appointment.html" class="btn btn-primary">BOOK NOW</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p class="copyright">&copy; 2025 Professional Barber Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
