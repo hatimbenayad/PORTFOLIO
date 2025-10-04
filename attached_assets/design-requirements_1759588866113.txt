@@ -1,0 +1,263 @@
+🧩 LAYOUT & STRUCTURE
+Overall Grid
+
+Uses a 12-column responsive grid, similar to Bootstrap.
+
+Maximum container width is around 1200–1440 px, centered using margin: 0 auto;.
+
+Column gutters are approximately 24–32 px.
+
+All main content is center-aligned.
+
+Each section has generous vertical padding, roughly 80–120 px top and bottom.
+
+Alternating background colors (white, gray, dark) provide visual separation.
+
+Page Flow (Top → Bottom)
+
+Header / Navbar
+
+Hero section
+
+Welcome / Intro
+
+Services / Features
+
+Statistics
+
+Product showcase
+
+Process
+
+Portfolio / Projects
+
+Testimonials
+
+Clients
+
+Blog preview
+
+Newsletter
+
+Shop section
+
+Contact section
+
+Footer
+
+🏗️ SECTIONS & HIERARCHY
+1. Header / Navbar
+
+Fixed at top (position: sticky; top: 0;), height around 64 px.
+
+Built with Flexbox, aligning logo on the left and nav links on the right.
+
+Nav links are uppercase with about 1 px letter-spacing and use a subtle hover effect (underline or opacity change).
+
+2. Hero Section
+
+Full width, about 50–70 vh high.
+
+Background: grayscale mountain photo with a light white gradient overlay.
+
+Left-aligned text vertically centered.
+
+Large headline (“CREATED FOR CREATIVES”), about 64 px, bold black.
+
+Call-to-action button (“Learn More”) — solid black background, white text, border-radius: 6–8 px, padding around 12 px × 32 px.
+
+3. Welcome Section
+
+White background, centered content.
+
+Section title around 32–36 px, semi-bold.
+
+Paragraph text around 16–18 px, muted gray (#777), max width ~700 px.
+
+Three small feature boxes aligned in a horizontal grid below.
+
+4. Services Section
+
+3-column grid (display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;).
+
+Each card has a white background, icon on top, heading and description below.
+
+Padding around 40 px, border-radius: 8 px, and a subtle shadow (rgba(0,0,0,0.05) 0 4px 12px).
+
+5. Stats Section
+
+Dark gray background (#333), white text.
+
+4 evenly spaced counters using Flexbox (justify-content: space-around;).
+
+Numbers are large (~32 px, bold); labels are smaller (~14 px, uppercase).
+
+6. Product Showcase
+
+Two-column flex layout:
+
+Left column contains text and bullet-style features with icons.
+
+Right column shows a product image (red phone mockup).
+
+Generous spacing (~80 px) between columns.
+
+7. Process Section
+
+Horizontal process line with three steps connected by a dashed line.
+
+Each step includes a circle icon, title, and short paragraph.
+
+Minimal “Learn More” bordered button below.
+
+8. Portfolio Section
+
+3-column responsive grid of project images.
+
+On hover, the image darkens and overlay text like “View Project” fades in.
+
+Images have rounded corners and spacing of ~32 px between them.
+
+9. Testimonials
+
+3 equal-width testimonial cards in a row.
+
+Each card: white background, shadow, circular user photo, quote, and name.
+
+Quote text is italic, around 16 px, while names are slightly larger (18–20 px, bold).
+
+10. Clients Section
+
+Horizontal row of grayscale client logos with gap: 40 px.
+
+On hover, logos change to color.
+
+11. Blog Preview
+
+3-column grid of blog cards.
+
+Each card: image on top → title → short description → “Read More.”
+
+Hover effect slightly zooms the image (transform: scale(1.03)).
+
+12. Newsletter
+
+Dark gray background with a subtle geometric texture.
+
+Centered title and single email input with “Subscribe” button.
+
+Input field is rounded (border-radius: 32 px), white background, inline button.
+
+13. Shop Section
+
+3-column grid of product cards.
+
+Each card: image, product name, price, and “Add to Cart” button.
+
+Hover effect slightly zooms the image and darkens the button.
+
+14. Contact Section
+
+Two columns:
+
+Left: contact information (address, phone, email).
+
+Right: contact form with name, email, message, and submit button.
+
+Inputs have thin gray borders, white background, border-radius: 6 px.
+
+15. Footer
+
+Black background, multi-column flex layout (logo, navigation, social icons, newsletter).
+
+Small gray text (#999), 12–14 px font size.
+
+Hover transitions links to white with underline.
+
+✍️ TYPOGRAPHY
+
+Font Family: Clean geometric sans-serif (likely Montserrat, Lato, or Open Sans).
+
+H1: 56–64 px, bold (700), color #111.
+
+H2: 32–36 px, semi-bold (600), color #222.
+
+H3: Around 24 px, medium weight (500), color #333.
+
+Body text: 16–18 px, regular (400), color #555.
+
+Small or secondary text: 12–14 px, lighter color (#777).
+
+Line height: Approximately 1.5–1.6 for readability.
+
+Letter spacing: Around +0.5 px for uppercase or navigation text.
+
+🎨 COLOR SCHEME & CONTRAST
+
+Primary colors: Black (#111) and dark gray (#333).
+
+Secondary color: White (#fff).
+
+Accent color: Red (#E74C3C or similar).
+
+Neutrals: Gray tones (#777, #999, #ccc) for text and borders.
+
+Background alternates between light and dark for contrast.
+
+Smooth hover transitions (0.3 s) for buttons, links, and images.
+
+🧱 COMPONENTS & ELEMENTS
+
+Buttons:
+
+Primary: solid black background, white text, border-radius: 8px, padding 12px 24px.
+
+Secondary: transparent with black border, text color black.
+
+Hover: background darkens or inverts.
+
+Cards: white with soft shadow, rounded corners, padding ~32–40 px.
+
+Forms: full-width inputs, 1 px gray border, border-radius: 6 px, inline button for newsletter.
+
+Icons: vector SVGs, single color (~24–32 px).
+
+Images: rounded corners (4–8 px), responsive with object-fit: cover; hover zoom or dark overlay.
+
+📐 SPACING & SIZING
+
+Section padding: ~100 px top/bottom on desktop, 60 px on tablet.
+
+Inner container padding: 0 24 px.
+
+Card padding: 32–40 px.
+
+Gutter between columns: 24–32 px.
+
+Buttons: minimum width 160 px, height about 48 px.
+
+White space is generous to maintain a minimalist aesthetic.
+
+🎨 VISUAL STYLE
+
+Modern minimalist flat design.
+
+Emphasis on large imagery, clean typography, and plenty of white space.
+
+Subtle shadows (rgba(0,0,0,0.1)) to add depth.
+
+Smooth animations (0.2–0.3 s) for hover and transitions.
+
+Overall feeling: professional, balanced, visually calm.
+
+📱 RESPONSIVENESS
+
+Desktop (≥1200 px): Full 3–4 column grids, large typography, wide spacing.
+
+Tablet (768–1199 px): Switches to 2 columns, reduced vertical padding (~60 px).
+
+Mobile (≤767 px): Single-column stack, centered text, full-width images.
+
+Navbar collapses to a hamburger menu.
+
+Buttons and inputs resize for touch usability.
