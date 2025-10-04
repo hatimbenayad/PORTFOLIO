@@ -858,3 +858,207 @@ button {
         height: 36px;
     }
 }
+
+/* ============================================
+   ENHANCED MOBILE OPTIMIZATIONS
+   ============================================ */
+
+/* Mobile-first improvements */
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 60px;
+        --column-gap: 24px;
+    }
+    
+    .container {
+        padding: 0 16px;
+    }
+    
+    /* Mobile navigation */
+    .nav-container {
+        padding: 12px 0;
+    }
+    
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--color-white);
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1000;
+        padding: 20px;
+    }
+    
+    .nav-links.mobile-active {
+        display: flex;
+    }
+    
+    .nav-link {
+        font-size: 1.25rem;
+        padding: 20px 0;
+        text-align: center;
+        border-bottom: 1px solid var(--color-border);
+    }
+    
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 8px;
+    }
+    
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: var(--color-black);
+        margin: 3px 0;
+        transition: var(--transition);
+    }
+    
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Mobile hero */
+    .hero h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        margin: 20px 0;
+    }
+    
+    /* Mobile two-column layouts */
+    .two-column {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .two-column.reverse {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Mobile buttons */
+    .cta-button {
+        width: 100%;
+        padding: 16px 24px;
+        font-size: 1rem;
+        min-height: 48px;
+    }
+    
+    /* Mobile sections */
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    /* Mobile gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    /* Mobile testimonials */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Mobile contact */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Mobile forms */
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 16px; /* Prevent zoom on iOS */
+        padding: 12px 16px;
+        min-height: 48px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .cta-button:hover {
+        background-color: var(--color-black);
+        color: var(--color-white);
+    }
+    
+    .nav-link:hover {
+        color: var(--color-black);
+    }
+    
+    /* Ensure touch targets are large enough */
+    .nav-link,
+    .cta-button,
+    button {
+        min-height: 48px;
+        min-width: 48px;
+    }
+}
+
+/* Performance optimizations */
+@media (max-width: 768px) {
+    * {
+        animation-duration: 0.3s !important;
+        transition-duration: 0.3s !important;
+    }
+    
+    body {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

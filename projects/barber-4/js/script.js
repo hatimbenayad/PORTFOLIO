@@ -1,21 +1,27 @@
-// Mobile Menu Toggle
+// Enhanced Mobile Menu Toggle
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 const navLinks = document.querySelector('.nav-links');
+const body = document.body;
 
 if (mobileMenuToggle) {
     mobileMenuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+        navLinks.classList.toggle('mobile-active');
+        mobileMenuToggle.classList.toggle('active');
         
-        // Animate hamburger icon
-        const spans = mobileMenuToggle.querySelectorAll('span');
-        if (navLinks.classList.contains('active')) {
-            spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-            spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+        // Prevent body scroll when menu is open
+        if (navLinks.classList.contains('mobile-active')) {
+            body.style.overflow = 'hidden';
         } else {
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
+            body.style.overflow = '';
+        }
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+            navLinks.classList.remove('mobile-active');
+            mobileMenuToggle.classList.remove('active');
+            body.style.overflow = '';
         }
     });
 }
@@ -24,12 +30,10 @@ if (mobileMenuToggle) {
 const navLinksItems = document.querySelectorAll('.nav-links a');
 navLinksItems.forEach(link => {
     link.addEventListener('click', () => {
-        if (window.innerWidth <= 767) {
-            navLinks.classList.remove('active');
-            const spans = mobileMenuToggle.querySelectorAll('span');
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
+        if (window.innerWidth <= 768) {
+            navLinks.classList.remove('mobile-active');
+            mobileMenuToggle.classList.remove('active');
+            body.style.overflow = '';
         }
     });
 });

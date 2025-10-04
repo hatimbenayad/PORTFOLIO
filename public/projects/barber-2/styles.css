@@ -953,3 +953,141 @@ html {
     background-color: var(--color-accent);
     color: var(--color-primary-bg);
 }
+
+/* ===================================
+   MOBILE OPTIMIZATIONS
+   =================================== */
+
+/* Enhanced mobile responsiveness */
+@media (max-width: 768px) {
+    :root {
+        --spacing-xs: 6px;
+        --spacing-sm: 12px;
+        --spacing-md: 18px;
+        --spacing-lg: 24px;
+        --spacing-xl: 48px;
+        --spacing-xxl: 72px;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    /* Mobile navigation improvements */
+    .navbar {
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--color-primary-bg);
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1000;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links a {
+        font-size: 1.5rem;
+        padding: var(--spacing-md);
+        text-align: center;
+        border-bottom: 1px solid var(--color-secondary-bg);
+    }
+    
+    /* Mobile hero section */
+    .hero h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        margin: var(--spacing-md) 0;
+    }
+    
+    /* Touch-friendly buttons */
+    .hero-book-btn,
+    .book-now-btn,
+    .btn {
+        min-height: 48px;
+        padding: var(--spacing-sm) var(--spacing-lg);
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+    
+    /* Mobile gallery */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    /* Mobile testimonials */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Mobile services */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    /* Improve readability on small screens */
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-xs);
+    }
+}
+
+/* Accessibility and performance */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .nav-links a:hover,
+    .btn:hover {
+        transform: none;
+        background-color: var(--color-accent);
+    }
+    
+    /* Larger touch targets */
+    .nav-links a,
+    .btn,
+    button {
+        min-height: 48px;
+        min-width: 48px;
+    }
+}
